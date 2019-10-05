@@ -1,0 +1,69 @@
+body {
+    background: url(../images/rope_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.nav-wrapper {
+    background-color: #1c5d88;
+    border-bottom: 4px solid #790211;
+    min-height: 70px;
+    box-shadow: 2px 2px 4px #000;
+}
+.brand-logo {
+    height: 80px;
+    margin-left: 1.5rem;
+}
+nav li a {
+    font-size: 1.2rem;
+    line-height: 70px;
+}
+.red {
+    background: url(../images/winch-line_1920x600.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.amber {
+    background: url(../images/dock-line5_1920x600.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.green {
+    background: url(../images/wire-railing_1920-600.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.blue {
+    background: url(../images/life-line3_1920x600.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.align-left {
+    text-align: left;
+    padding-left: 2rem;
+}
+.container {
+    background-color: #fff;
+    opacity: 0.70;
+    box-shadow: 5px 5px 10px #ccc;
+    padding: 20px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Anton', sans-serif;
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+img {
+    max-width: 100%;
+}
