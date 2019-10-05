@@ -21,6 +21,7 @@ nav li a {
 }
 .red {
     background: url(../images/winch-line_1920x600.jpg) no-repeat center center fixed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,6 +29,7 @@ nav li a {
 }
 .amber {
     background: url(../images/dock-line5_1920x600.jpg) no-repeat center center fixed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,6 +37,7 @@ nav li a {
 }
 .green {
     background: url(../images/wire-railing_1920-600.jpg) no-repeat center center fixed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -42,6 +45,7 @@ nav li a {
 }
 .blue {
     background: url(../images/life-line3_1920x600.jpg) no-repeat center center fixed;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -53,7 +57,7 @@ nav li a {
 }
 .container {
     background-color: #fff;
-    opacity: 0.70;
+    opacity: 0.85;
     box-shadow: 5px 5px 10px #ccc;
     padding: 20px;
 }
@@ -66,4 +70,31 @@ h1 {
 }
 img {
     max-width: 100%;
+}
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.anchor {
+    display: block;
+    height: 70px; /*same height as nav*/
+    margin-top: -70px; /*same height as nav*/
+    visibility: hidden;
+  }
+  
+
+/* media queries */
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+        opacity: 1.0;
+    }
+    .grid-container {
+        grid-template-columns: auto;
+    }
+    h1, h2, h3, h4, h5 {
+        color: #666;
+    }
+
 }
