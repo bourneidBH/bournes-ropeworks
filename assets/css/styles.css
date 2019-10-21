@@ -81,7 +81,10 @@ img {
     height: 70px; /*same height as nav*/
     margin-top: -70px; /*same height as nav*/
     visibility: hidden;
-  }
+}
+.gray-bkgd {
+    background-color: #ddd;
+}
   
 
 /* media queries */
