@@ -11,8 +11,4 @@ $(document).ready(function(){
         setTimeout(autoplay, 5000);
     }
 
-    //auto resize text area on conact form
-    // $('#request').val('New Text');
-    // M.textareaAutoResize($('#request'));
-
   });

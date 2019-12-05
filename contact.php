@@ -33,22 +33,23 @@
     <title>Contact | Bourne's Ropeworks</title>
 </head>
 <body>
-        <!-- nav -->
+    <header>
         <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src="assets/images/BournesRopeworks_logo-reverse.png" alt="Bourne's Ropeworks" height="80px"></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#marine">Marine</a></li>
-                    <li><a href="index.html#industrial">Industrial</a></li>
-                    <li><a href="index.html#architectural">Architectural</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img src="assets/images/BournesRopeworks_logo-reverse.png" alt="Bourne's Ropeworks" height="80px"></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#marine">Marine</a></li>
+                        <li><a href="index.html#industrial">Industrial</a></li>
+                        <li><a href="index.html#architectural">Architectural</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#marine">Marine</a></li>
@@ -57,10 +58,16 @@
             <li><a href="index.html#about">About</a></li>
             <li><a href="contact.php">Contact</a></li>
         </ul>
-    </div>
+    </header>
     <!--main-->
-    <main class="container">
+    <main class="container full-height">
         <h1 class="center">Contact Us</h1>
+        <p class="center">Bourne’s Ropeworks LLC is located in West Allis, Wisconsin, west of Milwaukee. We will measure and install in the southeast Wisconsin area or splice to customer supplied dimensions and ship nationwide.</p>
+        <p class="center">
+            Phone: 414-380-4246<br>
+            Email: <a href="mailto:jbourne1@wi.rr.com">jbourne1@wi.rr.com</a>
+            Or fill out the form below.
+        </p>
         <?php if ($_POST && ($suspect || (isset($errors['mailfail'])) ) ) : ?>
         <p class="warning">Sorry, your mail couldn't be sent.</p>
         <?php elseif ($errors || $missing) : ?>
@@ -145,5 +152,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/js/app.js"></script>
-
 </body>
+</html>
