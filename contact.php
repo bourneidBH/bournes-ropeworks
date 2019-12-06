@@ -117,7 +117,7 @@
                     <?php endif; ?>
 
                 </label>
-                <input type="text" name="name" id="name"
+                <input type="text" name="phone" id="phone"
                     <?php
                     if ($errors) {
                         echo 'value="' . htmlentities($phone) . '"';
