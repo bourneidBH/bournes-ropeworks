@@ -70,6 +70,10 @@ h1 {
 img {
     max-width: 100%;
 }
+.card-title {
+    text-shadow: 2px 2px 3px #000;
+    font-weight: 700;
+}
 .grid-container {
     display: grid;
     gap: 30px;
@@ -104,7 +108,7 @@ img {
 @media screen and (max-width: 640px) {
     .container {
         width: 100%;
-        opacity: 1.0;
+        background-color: rgba(255, 255, 255, 1);
         padding: 20px;
     }
     .grid-container {
