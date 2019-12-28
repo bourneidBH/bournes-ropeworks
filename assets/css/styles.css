@@ -70,6 +70,15 @@ h1 {
 img {
     max-width: 100%;
 }
+p a {
+    color: #790211;
+}
+p a:hover {
+    color: #1c5d88;
+}
+p a:visited {
+    color: #790211;
+}
 .card-title {
     text-shadow: 2px 2px 3px #000;
     font-weight: 700;
@@ -97,6 +106,9 @@ img {
     background: #1c5d88 !important;
 }
 .input-field .prefix .active {
+    color: #1c5d88;
+}
+.material-icons .prefix .active {
     color: #1c5d88;
 }
 .full-height {
