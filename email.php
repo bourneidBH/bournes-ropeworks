@@ -49,7 +49,9 @@ if (isset($_POST['send'])) {
       $mail->Body    = $request;
   
       $mail->send();
-      echo 'Message has been sent';
+      // echo 'Message has been sent';
+      header('Location: thanks.php');
+
   } catch (Exception $e) {
       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
