@@ -81,7 +81,7 @@ p a:visited {
 }
 .card-title {
     text-shadow: 2px 2px 3px #000;
-    font-weight: 700;
+    font-weight: 600 !important;
 }
 .grid-container {
     display: grid;

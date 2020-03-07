@@ -5,6 +5,16 @@ $suspect = false;
 // Regular expression to search for suspect phrases
 $pattern = '/Content-type:|Bcc:|Cc:/i';
 
+// access
+// $dataSiteKey = getenv('data-sitekey')
+// $secretKey = getenv('secretKey');
+// $captcha = $_POST['g-recaptcha-response'];
+
+// if(!$captcha){
+//   echo '<p class="alert alert-warning">Please check the the captcha form.</p>';
+//   exit;
+// }
+
 // Recursive function that checks for suspect phrases
 // Third argument is passed by reference
 function isSuspect($value, $pattern, &$suspect) {

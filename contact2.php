@@ -1,35 +1,3 @@
-<?php
-    // Autoloader
-    if (file_exists('DIR_VENDOR' . 'autoload.php')) {
-        require_once('DIR_VENDOR' . 'autoload.php');
-    }
-
-    // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    // $dotenv->load();
-    // $s3_bucket = getenv('S3_BUCKET');
-    // $dataSitekey = getenv('data-sitekey');
-    // $secret_key = getenv('secretKey');
-    $errors = [];
-    $missing = [];
-    if (isset($_POST['send'])) {
-        $expected = ['name', 'email', 'phone', 'request'];
-        $required = ['name', 'email', 'request'];
-        $to = 'Jim Bourne <info@bournesropeworks.com>';
-        $subject = 'Feedback from online form';
-        $headers = [];
-        $headers[] = 'email';
-        $headers[] = 'Content-type: text/plain; charset=utf-8';
-        // most hosting servers require $authorized to be set to string -f followed immediately by valid email address on your domain
-        $authorized = '-finfo@bournesropeworks.com';
-        require './assets/includes/process_mail.php';
-        // if $mailSent = true redirect to thank you page, else display error message
-        if ($mailSent) {
-            header('Location: thanks.php');
-            exit;
-        }
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,76 +44,30 @@
                 </p>
             </div>
             <div class="col md 12">
-                <?php if ($_POST && ($suspect || (isset($errors['mailfail'])) ) ) : ?>
-                <p class="warning">Sorry, your mail couldn't be sent.</p>
-                <?php elseif ($errors || $missing) : ?>
-                <p class="warning">Please fix the item(s) indicated.</p>
-                <?php endif; ?>
 
                 <!--contact form-->
-                <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+                <form method="post" action="email.php">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">account_circle</i>
-                        <label for="name">Name:
-                        <?php if ($missing && in_array('name', $missing)) : ?>
-                            <span class="warning">Please enter your name.</span>
-                        <?php endif; ?>
-                        </label>
-                        <input type="text" name="name" id="name"
-                            <?php
-                            if ($errors || $missing) {
-                                echo 'value="' . htmlentities($name) . '"';
-                            }
-                            ?>
-                        >
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name">
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">phone</i>
-                        <label for="phone">Phone (format 012-345-6789):
-                            <?php if (isset($errors['phone'])) : ?>
-                                <span class="warning">Invalid phone number.</span>
-                            <?php endif; ?>
-
-                        </label>
-                        <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            <?php
-                            if ($errors) {
-                                echo 'value="' . htmlentities($phone) . '"';
-                            }
-                            ?>
-                        >
+                        <label for="phone">Phone (format 012-345-6789):</label>
+                        <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
-                        <label for="email">Email:
-                            <?php if ($missing && in_array('email', $missing)) : ?>
-                                <span class="warning">Please enter your email address.</span>
-                            <?php elseif (isset($errors['email'])) : ?>
-                                <span class="warning">Invalid email address.</span>
-                            <?php endif; ?>
-                        </label>
-                        <input type="email" name="email" id="email"
-                            <?php
-                            if ($errors || $missing) {
-                                echo 'value="' . htmlentities($email) . '"';
-                            }
-                            ?>
-                        >
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">mode_edit</i>
-                        <textarea name="request" id="request" class="materialize-textarea"><?php
-                            if ($errors || $missing) {
-                                echo htmlentities($request);
-                            }
-                            ?>
+                        <textarea name="request" id="request" class="materialize-textarea">
                         </textarea>
-                        <label for="request">Request:
-                            <?php if ($missing && in_array('request', $missing)) : ?>
-                                <span class="warning">Please enter details about your request.</span>
-                            <?php endif; ?>
-                        </label>
+                        <label for="request">Request:</label>
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey=<?php $dataSitekey ?></div> -->
                     <div class="col s12 center">
