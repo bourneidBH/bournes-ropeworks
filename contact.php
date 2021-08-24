@@ -68,7 +68,7 @@
         <div class="row">
             <div class="col m10 offset-m1 s12">
                 <h1 class="center">Contact Us</h1>
-                <p class="center">Bourne’s Ropeworks LLC is located in West Allis, Wisconsin, west of Milwaukee. We will measure and install in the southeast Wisconsin area or splice to customer supplied dimensions and ship nationwide.</p>
+                <p class="center">Bourne’s Ropeworks LLC is located in Manitowoc, Wisconsin. We will measure and install in the Sheboygan and Manitowoc, Wisconsin areas or splice to customer supplied dimensions and ship nationwide.</p>
                 <p class="center">
                     Phone: <a href="tel:4143804246">414-380-4246</a><br>
                     Email: <a href="mailto:info@bournesropeworks.com">info@bournesropeworks.com</a>
