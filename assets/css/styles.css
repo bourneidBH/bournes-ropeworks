@@ -130,6 +130,28 @@ p a:visited {
 .full-height {
     height: 100%;
 }
+.text-center {
+    text-align: center;
+}
+footer {
+    width: 100%;
+    background: #1c5d88;
+    color: #fff;
+}
+footer .container {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 15px 20px;
+}
+footer p {
+    margin: 0;
+}
+footer p a {
+    color: #fff;
+}
+footer p a:hover {
+    color: rgba(255,255,255,0.85);
+}
   
 
 /* media queries */
@@ -145,5 +167,8 @@ p a:visited {
     h1, h2, h3, h4, h5 {
         color: #666;
     }
-
+    footer .container {
+        background-color: transparent;
+        padding: 15px 20px;
+    }
 }
