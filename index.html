@@ -55,7 +55,7 @@
             <li><a href="#industrial">Industrial</a></li>
             <li><a href="#architectural">Architectural</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
     <!--slider-->
@@ -420,6 +420,50 @@
                     <p>With Bourne’s Ropeworks you can count on a high-quality, reliable product, and consistent customer service and technical support.</p>
                     <p>We are proud to serve diverse clients including Paralympics sailing silver medallist John Ruf, Harken Yacht Equipment, Wisconsin Lifting Specialists, Inc., University of Wisconsin-Milwaukee Water Institute, and Nautor-Swan.</p>
                 </div>
+            </div>
+        </section>
+        <div id="contact" class="anchor"></div>
+        <section>
+            <h3 class="text-center">Contact Us</h3>
+            <p class="text-center">
+                Bourne’s Ropeworks LLC is located in Manitowoc, Wisconsin. We will measure and install in the Sheboygan and Manitowoc, Wisconsin areas or splice to customer supplied dimensions and ship nationwide.
+            </p>
+            <p class="text-center">
+                Phone: <a href="tel:+14143804246">414-380-4246</a><br>
+                Email: <a href="mailto:info@bournesropeworks.com">info@bournesropeworks.com</a> Or fill out the form below.
+            </p>
+            <div class="row">
+                <form
+                    action="https://formspree.io/f/xeewndoj"
+                    method="POST"
+                    class="col s12"
+                    >
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone</i>
+                        <label for="phone">Phone (format 012-345-6789):</label>
+                        <input type="text" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea name="request" id="request" class="materialize-textarea" required></textarea>
+                        <label for="request">Request:</label>
+                    </div>
+                    <div class="col s12 center">
+                        <button type="submit" name="send" id="send" value="Submit request" class="waves-effect waves-light btn">
+                            Submit request
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
 
